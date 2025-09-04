@@ -24,6 +24,12 @@ module.exports = tseslint.config(
       ...angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
     rules: {
       "@angular-eslint/directive-selector": [
         "error",
@@ -37,9 +43,27 @@ module.exports = tseslint.config(
         "error",
         {
           type: "element",
-          prefix: "app",
+          prefix: ["app", ""],
           style: "kebab-case",
         },
+      ],
+      "@typescript-eslint/prefer-readonly": "error",
+      "no-param-reassign": ["error", { "props": true }],
+      "@typescript-eslint/no-non-null-assertion": "error",
+      "prefer-const": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "no-console": "warn",
+      "@angular-eslint/no-empty-lifecycle-method": "error",
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": true,
+          "ignoreDeclarationSort": true,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+          "allowSeparatedGroups": true
+        }
       ],
     },
   },
@@ -49,6 +73,18 @@ module.exports = tseslint.config(
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
     ],
-    rules: {},
+    rules: {
+      "@angular-eslint/template/alt-text": "error",
+      "@angular-eslint/template/elements-content": "error",
+      "@angular-eslint/template/label-has-associated-control": "error",
+      "@angular-eslint/template/table-scope": "error",
+      "@angular-eslint/template/valid-aria": "error",
+      "@angular-eslint/template/click-events-have-key-events": "error",
+      "@angular-eslint/template/mouse-events-have-key-events": "error",
+      "@angular-eslint/template/no-autofocus": "error",
+      "@angular-eslint/template/no-distracting-elements": "error",
+      "@angular-eslint/template/no-positive-tabindex": "error",
+      "@angular-eslint/template/role-has-required-aria": "error",
+    },
   },
 );
