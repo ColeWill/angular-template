@@ -52,8 +52,9 @@
     "@storybook/addon-onboarding": "^9.1.4",
     "@storybook/angular": "^9.1.4",
     "@types/express": "^5.0.1",
-    "@types/jasmine": "~5.1.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.17.19",
+    "jsdom": "^26.1.0",
     "cypress": "^15.1.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
@@ -62,6 +63,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "storybook": "^9.1.4",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.2",
+    "vitest": "^3.2.4"
   }
 }
