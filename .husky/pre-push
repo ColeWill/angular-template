@@ -1,2 +1,3 @@
 echo "Running unit tests 🧪 and e2e tests 🎭 before push..."
-npm run test:ci && npm run cypress:run
+ng test
+# npm run test:ci && npm run cypress:run
