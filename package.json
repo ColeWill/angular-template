@@ -10,8 +10,7 @@
     "serve:ssr:angular-template": "node dist/angular-template/server/server.mjs",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
-    "e2e:headless": "cypress run --headless",
-    "e2e:ci": "start-server-and-test start http://localhost:4200 'cypress run'"
+    "e2e:headless": "cypress run --headless"
   },
   "prettier": {
     "overrides": [
