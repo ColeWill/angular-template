@@ -26,7 +26,7 @@ module.exports = tseslint.config(
     processor: angular.processInlineTemplates,
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        project: ["./tsconfig.app.json", "./tsconfig.spec.json"],
         tsconfigRootDir: __dirname,
       },
     },
@@ -48,7 +48,7 @@ module.exports = tseslint.config(
         },
       ],
       "@typescript-eslint/prefer-readonly": "error",
-      "no-param-reassign": ["error", { "props": true }],
+      "no-param-reassign": ["error", { props: true }],
       "@typescript-eslint/no-non-null-assertion": "error",
       "prefer-const": "error",
       "@typescript-eslint/no-unused-vars": "error",
@@ -58,12 +58,12 @@ module.exports = tseslint.config(
       "sort-imports": [
         "error",
         {
-          "ignoreCase": true,
-          "ignoreDeclarationSort": true,
-          "ignoreMemberSort": false,
-          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-          "allowSeparatedGroups": true
-        }
+          ignoreCase: true,
+          ignoreDeclarationSort: true,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+          allowSeparatedGroups: true,
+        },
       ],
     },
   },
