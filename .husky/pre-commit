@@ -1,0 +1,2 @@
+echo "Running lint-staged with eslint ✅ and prettier 🚿🧼 pre-commit."
+npx lint-staged

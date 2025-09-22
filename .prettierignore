@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+documentation
+e2e
+eslint.config.mjs
+tsconfig.spec.json
+.husky
